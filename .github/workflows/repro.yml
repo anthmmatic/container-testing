@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+          image: ghcr.io/anthmmatic/container-testing:main
+    steps:
+       - run: |
+           echo "test=123" > $GITHUB_ENV
+       - uses: actions/checkout@v3
