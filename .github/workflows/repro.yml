@@ -8,5 +8,5 @@ jobs:
           image: ghcr.io/anthmmatic/container-testing:main
     steps:
        - run: |
-           echo "test=123" > $GITHUB_ENV
+           cat /etc/passwd
        - uses: actions/checkout@v3
