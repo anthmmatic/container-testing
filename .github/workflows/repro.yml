@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/anthmmatic/container-testing:main
+      options: --user 1001
     steps:
        - run: cat /etc/passwd
        - run: ls -la
