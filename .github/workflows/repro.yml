@@ -5,8 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-          image: ghcr.io/anthmmatic/container-testing:main
+      image: ghcr.io/anthmmatic/container-testing:main
     steps:
-       - run: |
-           cat /etc/passwd
+       - run: cat /etc/passwd
+       - run: ls -la
        - uses: actions/checkout@v3
+       - run: ls -la
